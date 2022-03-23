@@ -1,3 +1,4 @@
+const { json } = require('express');
 const express = require('express');
 const router = express.Router();
 
@@ -13,12 +14,23 @@ router.post('/', function(req,res,next){
     const arFt = req.body.arFt;
     const kepUrl = req.body.kepUrl;
 
-    const hirdetes = new Hirdetes({_id,kategoria,cim,leiras,hirdetesDatuma,serulesmentes,arFt,kepUrl});
+    try {
+        if (arFt % 1000 != 0) {
+            throw Error("Az ár nem oszthato 1000-rel")
+        }
+        const hirdetes = new Hirdetes({_id,kategoria,cim,leiras,hirdetesDatuma,serulesmentes,arFt,kepUrl});
 
     hirdetes
     .save()
     .then(res.json({"status": "created"}))
     .catch(err => console.log(err))
+    } catch (err) {
+        res.status(400)-json({
+            "error": err.message,
+        })
+    }
+
+    
 })
 
 module.exports = router;
