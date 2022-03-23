@@ -16,7 +16,8 @@ const hirdetesSchema = new Schema({
         maxlength: 3000
     },
     hirdetesDatuma: {
-        type: Date
+        type: Date,
+        default: Date.now
     },
     serulesmentes: Boolean,
     arFt: {
