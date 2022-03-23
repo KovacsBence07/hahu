@@ -6,3 +6,10 @@
 4. nodemon telepitese npm i --save nodemon, majd a start script szerekesztese ("start": "nodemon ./bin/www")
 5. mongoose telepitese npm i --save mongoose
 
+
+A 2. feladat: Adatbazis letrehozasa
+1. Lokalis mongoDB szerver elinditasa: cmd ben: mongod parancs kiadasa (abblakot nem szabad becsukni)
+2. A compass-ban beirjuk a szerver url-jet: mongodb://127.0.0.1:27017
+3. adatbazis es collectionok importalasa letrehozasa
+4. model mappa letrehozasa majd a tablak .js fajlba levo letrehozasa
+
