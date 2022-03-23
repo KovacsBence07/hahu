@@ -15,5 +15,3 @@ const kategoriaSchema = new Schema({
 
 module.exports = mongoose.model('Kategoria',kategoriaSchema,'kategoriak');
 
-//git config --global user.email "you@example.com"
-//git config --global user.name "Your Name"
