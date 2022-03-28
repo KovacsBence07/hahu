@@ -4,7 +4,11 @@ const Schema = mongoose.Schema;
 
 const hirdetesSchema = new Schema({
     _id: Number,
-    kategoria: Number,
+    kategoria:{
+        type: Number,
+        default: 1,
+        ref: 'Kategoria'
+    },
     cim: {
         type: String,
         required: true,

@@ -4,10 +4,7 @@ const Schema = mongoose.Schema;
 
 const kategoriaSchema = new Schema({
     _id: Number,
-    kategoria: {
-        type: Number,
-        default: 1,
-    },
+    kategoria: Number,
     nev: {
         type: String,
         required: true,
